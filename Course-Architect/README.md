@@ -92,7 +92,7 @@ Then edit `.env`:
 AWS_ACCESS_KEY_ID=AKIA...
 AWS_SECRET_ACCESS_KEY=your_secret_key
 AWS_DEFAULT_REGION=us-east-1
-AWS_BEDROCK_MODEL_ID=us.anthropic.claude-3-7-sonnet-20250219-v1:0
+AWS_BEDROCK_MODEL_ID=us.anthropic.claude-sonnet-4-5-20250929-v1:0
 
 # --- Option B: Anthropic API directly ---
 # ANTHROPIC_API_KEY=sk-ant-...
@@ -157,7 +157,7 @@ long as it supports tool use / function calling via the Converse API (required
 for structured output and the researcher's `web_search` tool). For example:
 
 ```env
-AWS_BEDROCK_MODEL_ID=us.anthropic.claude-3-7-sonnet-20250219-v1:0
+AWS_BEDROCK_MODEL_ID=us.anthropic.claude-sonnet-4-5-20250929-v1:0
 ```
 
 ### Anthropic API (direct)
@@ -272,4 +272,4 @@ Make sure `.env` has either `AWS_ACCESS_KEY_ID` or `ANTHROPIC_API_KEY` set corre
 Install the extra: `uv sync --extra anthropic`. Only needed when using `ANTHROPIC_API_KEY`.
 
 **Research quality is low / Judge keeps rejecting**
-Try a more capable model (e.g. Claude 3.7 Sonnet) or make the topic more specific.
+Try a more capable model (e.g. Claude Sonnet 4.5) or make the topic more specific.

@@ -1,5 +1,6 @@
 """Model configuration — builds the LLM backend (Amazon Bedrock or Anthropic API)."""
 import os
+import re
 import sys
 
 from botocore.config import Config
@@ -10,7 +11,7 @@ from observability import attach_wire_logger
 
 console = Console()
 
-DEFAULT_BEDROCK_MODEL_ID = "us.anthropic.claude-3-7-sonnet-20250219-v1:0"
+DEFAULT_BEDROCK_MODEL_ID = "us.anthropic.claude-sonnet-4-5-20250929-v1:0"
 
 
 def get_model():
@@ -26,12 +27,10 @@ def get_model():
         except ImportError:
             console.print("[yellow]anthropic package not installed; falling back to Bedrock.[/yellow]")
         else:
-            api_model_id = (
-                model_id
-                .replace("us.anthropic.", "")
-                .replace("anthropic.", "")
-                .rstrip("-v1:0").rstrip("-v2:0")
-            )
+            # Bedrock ID -> Anthropic API ID: drop the region/provider prefix
+            # (e.g. "us.anthropic.") and the Bedrock version suffix (e.g. "-v1:0").
+            api_model_id = re.sub(r"^(?:[a-z]{2,6}\.)?anthropic\.", "", model_id)
+            api_model_id = re.sub(r"-v\d+:\d+$", "", api_model_id)
             console.print(f"[dim]Using Anthropic API | Model: {api_model_id}[/dim]")
             return AnthropicModel(client_args={"api_key": anthropic_key}, model_id=api_model_id)
 

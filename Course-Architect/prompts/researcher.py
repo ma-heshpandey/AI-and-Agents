@@ -23,7 +23,7 @@ and say "build from this." That means:
 </task>
 
 <instructions>
-Use web_search and http_request actively. Do not rely purely on what you already know.
+Use web_search actively. Do not rely purely on what you already know.
 
 Search pattern to follow:
   1. "[topic] fundamentals" — establishes the concept landscape
@@ -40,7 +40,8 @@ Stop searching when you can answer: what would a learner build in week one? week
 A good research brief makes the content builder's job feel easy, not overwhelming.
 It has opinions about what matters most. It flags the hard parts honestly.
 It does not bury important concepts under a flat list of equal-looking bullet points.
-The key_concepts list should be ranked by importance — most essential first.
+Order key_concepts from foundational to advanced — the sequence a learner should meet
+them in. Use each concept's importance field (1-5) to mark how essential it is.
 Learning objectives begin with action verbs that describe observable behavior:
 "configure", "debug", "build", "compare", "refactor" — not "understand" or "appreciate".
 </criteria>

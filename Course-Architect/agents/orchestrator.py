@@ -1,8 +1,7 @@
-import json
 from strands import Agent, tool
 from rich.console import Console
 from rich.panel import Panel
-from models import JudgeVerdict, Verdict
+from models import CourseOutline, JudgeVerdict, ResearchReport, Verdict
 from observability import LLMStepLogger
 from prompts import ORCHESTRATOR_SYSTEM_PROMPT
 
