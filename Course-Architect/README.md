@@ -152,21 +152,19 @@ uv run python main.py
 
 ### Amazon Bedrock
 
-`AWS_BEDROCK_MODEL_ID` isn't a fixed list — set it to any Bedrock model ID your
-account has access to, as long as it supports tool use / function calling via
-the Converse API (required for structured output and the researcher's
-`web_search` tool). A few known-good ones:
+Set `AWS_BEDROCK_MODEL_ID` to any Bedrock model your account has access to, as
+long as it supports tool use / function calling via the Converse API (required
+for structured output and the researcher's `web_search` tool). For example:
 
-| Model ID | Notes |
-|---|---|
-| `us.anthropic.claude-3-7-sonnet-20250219-v1:0` | Default — good balance of quality/cost |
-| `us.anthropic.claude-3-5-sonnet-20241022-v2:0` | Claude 3.5 Sonnet |
-| `us.anthropic.claude-3-haiku-20240307-v1:0` | Faster and cheaper |
-| `amazon.nova-pro-v1:0` | Amazon Nova Pro |
+```env
+AWS_BEDROCK_MODEL_ID=us.anthropic.claude-3-7-sonnet-20250219-v1:0
+```
 
 ### Anthropic API (direct)
 
-Install the extra and set `ANTHROPIC_API_KEY`:
+Install the extra and set `ANTHROPIC_API_KEY`. When it's set, the app uses the
+Anthropic API instead of Bedrock and derives the model name from
+`AWS_BEDROCK_MODEL_ID` — again, any tool-use-capable Claude model works.
 
 ```bash
 uv sync --extra anthropic
