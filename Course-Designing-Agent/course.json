@@ -1,0 +1,680 @@
+{
+  "title": "Python for Beginners: Write Working Programs from Day One",
+  "tagline": "Learn to write Python programs that solve real problems, automate tasks, and launch your programming journey with confidence.",
+  "target_audience": "Complete programming beginners with no prior coding experience, career changers looking to enter tech fields, students preparing for computer science studies, professionals seeking to automate tasks in their current roles, and hobbyists interested in building personal projects. Assumes basic computer literacy but no technical background.",
+  "prerequisites": [
+    "Basic computer skills: creating/saving files, navigating folders, using a text editor",
+    "Ability to install software on their computer (Python interpreter and a code editor)",
+    "Comfort with basic arithmetic and logical thinking",
+    "No prior programming experience required"
+  ],
+  "total_duration_hours": 14.5,
+  "learning_outcomes": [
+    "Write and execute Python programs using variables, data types, and operators to process information and produce output",
+    "Build programs that make decisions using conditional statements and automate repetitive tasks with for and while loops",
+    "Define reusable functions with parameters and return values to organize code and solve modular problems",
+    "Store and manipulate structured data using lists and dictionaries to model real-world information",
+    "Process text files by reading data, transforming it with string methods, and writing results to disk",
+    "Debug programs systematically by interpreting error messages and applying troubleshooting techniques",
+    "Import and use standard library modules to leverage Python's built-in capabilities without reinventing solutions",
+    "Build a complete multi-feature application that integrates variables, control flow, functions, data structures, and file I/O"
+  ],
+  "modules": [
+    {
+      "title": "Getting Started: Your First Python Program",
+      "description": "Install Python, run code in the interactive shell, and write your first script that produces visible output.",
+      "learning_objectives": [
+        "Install Python and a code editor on your computer",
+        "Execute Python code in the REPL (interactive shell) and run saved script files",
+        "Write programs using print statements, basic arithmetic, and comments",
+        "Identify and fix simple syntax errors by reading error messages"
+      ],
+      "lessons": [
+        {
+          "title": "Installing Python and Setting Up Your Environment",
+          "key_teaching_points": [
+            "Download and install Python from python.org, verifying installation in terminal/command prompt",
+            "Choose and install a beginner-friendly code editor (Thonny, VS Code, or IDLE)",
+            "Understand the difference between the Python interpreter and a code editor",
+            "Navigate to the correct directory and run 'python --version' to confirm setup"
+          ],
+          "estimated_minutes": 20
+        },
+        {
+          "title": "The Python REPL: Your Interactive Playground",
+          "key_teaching_points": [
+            "Launch the Python REPL and use it as an interactive calculator",
+            "Understand immediate feedback: type expression, see result instantly",
+            "Recognize when you're in the REPL (>>> prompt) vs. terminal",
+            "Practice basic arithmetic operations (+, -, *, /, //, %, **) with live results"
+          ],
+          "estimated_minutes": 25
+        },
+        {
+          "title": "Writing and Running Your First Script",
+          "key_teaching_points": [
+            "Create a .py file, write print('Hello, World!'), and save it",
+            "Run the script from terminal using 'python filename.py'",
+            "Understand the difference between REPL (interactive) and script (saved file) execution",
+            "Add comments using # to document what your code does",
+            "Intentionally create and then fix a syntax error to practice reading error messages"
+          ],
+          "estimated_minutes": 30
+        }
+      ],
+      "hands_on_activity": "Build a 'Personal Introduction' program that prints your name, hometown, and three favorite hobbies using multiple print statements. Run it from the terminal and modify it to include calculated information (like your age in days by multiplying years by 365).",
+      "key_takeaways": [
+        "The REPL provides instant feedback for trying Python expressions; scripts save code for repeated execution",
+        "Python files end in .py and run from the terminal using 'python filename.py'",
+        "Error messages point to the line and type of problem\u2014they're helpful guides, not failures",
+        "Comments (starting with #) explain code to humans and are ignored by Python"
+      ]
+    },
+    {
+      "title": "Variables and Data Types: Storing Information",
+      "description": "Store values in named variables and work with Python's core data types: integers, floats, strings, and booleans.",
+      "learning_objectives": [
+        "Create variables with meaningful names and assign values using the = operator",
+        "Distinguish between integers, floats, strings, and booleans and when to use each",
+        "Perform operations appropriate to each data type (arithmetic, concatenation, comparison)",
+        "Convert between data types using int(), float(), str(), and understand when conversion is necessary"
+      ],
+      "lessons": [
+        {
+          "title": "Variables: Naming and Storing Values",
+          "key_teaching_points": [
+            "Variables are labels that reference values stored in memory, like labeled boxes",
+            "Assignment uses = (not the same as mathematical equality or ==)",
+            "Variable naming rules: start with letter/underscore, use snake_case, make names descriptive",
+            "Variables can be reassigned to new values, changing what the name references",
+            "Python is dynamically typed\u2014you don't declare types, but every value has one"
+          ],
+          "estimated_minutes": 30
+        },
+        {
+          "title": "Numbers: Integers and Floats",
+          "key_teaching_points": [
+            "Integers are whole numbers (42, -17, 0); floats have decimal points (3.14, -0.5)",
+            "Arithmetic operators: +, -, *, / (always returns float), // (floor division), % (remainder), ** (exponent)",
+            "Order of operations (PEMDAS) applies; use parentheses to control evaluation order",
+            "Common mistake: / vs. // for division\u2014understand when you want decimals vs. whole numbers"
+          ],
+          "estimated_minutes": 25
+        },
+        {
+          "title": "Strings: Working with Text",
+          "key_teaching_points": [
+            "Strings are sequences of characters in quotes (single or double, be consistent)",
+            "Concatenation with + joins strings; multiplication with * repeats them",
+            "Strings are immutable\u2014operations create new strings, don't modify originals",
+            "Use len() to get string length; introduce basic indexing with [0] for first character"
+          ],
+          "estimated_minutes": 25
+        },
+        {
+          "title": "Booleans, Type Conversion, and Input",
+          "key_teaching_points": [
+            "Booleans are True or False (capitalized); result from comparisons (==, !=, <, >, <=, >=)",
+            "input() gets user input as a string\u2014always returns string even if user types number",
+            "Convert types explicitly: int('42'), float('3.14'), str(100)",
+            "Common error: forgetting to convert input() result before arithmetic"
+          ],
+          "estimated_minutes": 30
+        }
+      ],
+      "hands_on_activity": "Create a 'Personal Calculator' that prompts the user for two numbers using input(), converts them to floats, performs all arithmetic operations (+, -, *, /, //, %, **), and displays the results with descriptive labels. Test with whole numbers and decimals to see the difference between / and //.",
+      "key_takeaways": [
+        "Variables store references to values; assignment with = creates or updates these references",
+        "Python has four core types: int (whole numbers), float (decimals), str (text), bool (True/False)",
+        "input() always returns a string\u2014use int() or float() to convert before math operations",
+        "= assigns values; == tests equality; don't confuse them in your code"
+      ]
+    },
+    {
+      "title": "Making Decisions with Conditional Statements",
+      "description": "Write programs that make decisions and execute different code paths based on conditions using if, elif, and else.",
+      "learning_objectives": [
+        "Write if statements that execute code only when a condition is True",
+        "Chain multiple conditions using elif to test alternatives in order",
+        "Provide fallback behavior with else when no conditions match",
+        "Combine conditions using logical operators (and, or, not) to express complex logic"
+      ],
+      "lessons": [
+        {
+          "title": "The if Statement: Conditional Execution",
+          "key_teaching_points": [
+            "if tests a condition; the indented code block runs only if the condition is True",
+            "Indentation defines the code block\u2014Python uses whitespace, not curly braces",
+            "Comparison operators create boolean conditions: ==, !=, <, >, <=, >=",
+            "Common mistake: using = instead of == in conditions assigns rather than compares"
+          ],
+          "estimated_minutes": 30
+        },
+        {
+          "title": "elif and else: Multiple Branches",
+          "key_teaching_points": [
+            "elif (else if) chains alternatives\u2014tested in order, first True condition wins",
+            "else catches everything that didn't match previous conditions\u2014no condition needed",
+            "Only ONE branch executes in an if/elif/else chain, then Python moves on",
+            "Order matters: put specific conditions before general ones or they'll never run"
+          ],
+          "estimated_minutes": 25
+        },
+        {
+          "title": "Logical Operators and Complex Conditions",
+          "key_teaching_points": [
+            "and requires both conditions True; or requires at least one True; not inverts True/False",
+            "Use parentheses to group complex conditions and control evaluation order",
+            "Short-circuit evaluation: 'and' stops at first False; 'or' stops at first True",
+            "in operator tests membership: 'a' in 'apple' is True"
+          ],
+          "estimated_minutes": 25
+        }
+      ],
+      "hands_on_activity": "Build a 'Grade Calculator' that asks for a numerical score (0-100), then uses if/elif/else to display the letter grade (A: 90-100, B: 80-89, C: 70-79, D: 60-69, F: below 60) with appropriate messages. Add validation that checks if the score is outside 0-100 and displays an error message.",
+      "key_takeaways": [
+        "Indentation is syntax in Python\u2014it defines which code belongs to which block",
+        "if/elif/else chains test conditions in order; the first True condition executes, then the chain exits",
+        "Use == for comparison, = for assignment; mixing them is a common beginner error",
+        "Logical operators (and, or, not) combine simple conditions into complex decision logic"
+      ]
+    },
+    {
+      "title": "Automating Repetition with Loops",
+      "description": "Use for and while loops to automate repetitive tasks, iterate over sequences, and process collections of data.",
+      "learning_objectives": [
+        "Write for loops that iterate over ranges and sequences to repeat actions",
+        "Use while loops to repeat code until a condition becomes False",
+        "Accumulate results using variables that update inside loops",
+        "Control loop execution with break (exit early) and continue (skip to next iteration)"
+      ],
+      "lessons": [
+        {
+          "title": "for Loops: Iterating Over Sequences",
+          "key_teaching_points": [
+            "for loops iterate over sequences\u2014each item gets assigned to the loop variable",
+            "range(n) generates numbers from 0 to n-1; range(start, stop, step) for more control",
+            "Common mistake: range(10) gives 0-9, not 1-10; off-by-one errors are frequent",
+            "Loop variables persist after the loop ends with the last value"
+          ],
+          "estimated_minutes": 30
+        },
+        {
+          "title": "while Loops: Repeating Until a Condition Changes",
+          "key_teaching_points": [
+            "while loops continue as long as the condition remains True\u2014check condition before each iteration",
+            "Must update variables inside the loop that affect the condition, or loop runs forever",
+            "Infinite loops are bugs: press Ctrl+C to stop runaway programs",
+            "while is useful when you don't know how many iterations you need in advance"
+          ],
+          "estimated_minutes": 25
+        },
+        {
+          "title": "Loop Patterns: Accumulation and Control",
+          "key_teaching_points": [
+            "Accumulator pattern: initialize variable before loop, update it inside loop each iteration",
+            "break exits the loop immediately; continue skips remaining code and starts next iteration",
+            "Nested loops: inner loop completes fully for each iteration of outer loop",
+            "Use meaningful loop variable names (for student in students, not just for i in x)"
+          ],
+          "estimated_minutes": 30
+        }
+      ],
+      "hands_on_activity": "Create a 'Number Guessing Game' where the program picks a random number (1-100) using import random and random.randint(). Use a while loop to let the user guess repeatedly. After each guess, tell them if they're too high or too low. When they guess correctly, display how many attempts it took and break out of the loop.",
+      "key_takeaways": [
+        "for loops iterate over known sequences; while loops continue until a condition changes",
+        "range(n) produces 0 through n-1, not 1 through n\u2014watch for off-by-one errors",
+        "Accumulator pattern (initialize before loop, update inside) builds up results across iterations",
+        "break exits the loop entirely; continue skips to the next iteration"
+      ]
+    },
+    {
+      "title": "Organizing Code with Functions",
+      "description": "Define reusable functions that take inputs, perform operations, and return results to eliminate repetition and organize code.",
+      "learning_objectives": [
+        "Define functions using def with parameters and return values",
+        "Call functions by name with arguments and capture returned values",
+        "Explain the difference between defining a function (creating it) and calling it (using it)",
+        "Use functions to eliminate code duplication and break problems into smaller pieces"
+      ],
+      "lessons": [
+        {
+          "title": "Defining and Calling Functions",
+          "key_teaching_points": [
+            "def creates a function; indented code is the function body that runs when called",
+            "Parameters are placeholders in the function definition; arguments are actual values passed when calling",
+            "return sends a value back to the caller; function without return gives back None",
+            "Critical distinction: defining a function (def) doesn't run it; calling it (function_name()) does"
+          ],
+          "estimated_minutes": 35
+        },
+        {
+          "title": "Parameters, Arguments, and Return Values",
+          "key_teaching_points": [
+            "Functions can have multiple parameters separated by commas",
+            "Arguments are passed in order (positional) or by name (keyword arguments)",
+            "return immediately exits the function and sends the value back",
+            "Common error: confusing print() with return\u2014print displays, return sends values to caller"
+          ],
+          "estimated_minutes": 30
+        },
+        {
+          "title": "Scope and Function Design",
+          "key_teaching_points": [
+            "Variables defined inside functions are local\u2014they don't exist outside the function",
+            "Functions can access global variables but shouldn't modify them (use parameters and return instead)",
+            "Good functions do one clear task, have descriptive names, and return results rather than printing",
+            "DRY principle: Don't Repeat Yourself\u2014if you copy-paste code, make it a function"
+          ],
+          "estimated_minutes": 25
+        }
+      ],
+      "hands_on_activity": "Build a 'Temperature Converter' with three functions: celsius_to_fahrenheit(), fahrenheit_to_celsius(), and a main menu function that asks the user which conversion they want, gets the temperature, calls the appropriate function, and displays the result. Test all functions with known values (0\u00b0C = 32\u00b0F, 100\u00b0C = 212\u00b0F).",
+      "key_takeaways": [
+        "def defines a function (the recipe); calling it by name runs the code (follows the recipe)",
+        "return sends values back to caller; print() displays to screen\u2014they serve different purposes",
+        "Parameters are placeholders in the definition; arguments are actual values when calling",
+        "Functions eliminate repetition, make code testable, and break complex problems into manageable pieces"
+      ]
+    },
+    {
+      "title": "Working with Lists: Ordered Collections",
+      "description": "Create and manipulate lists to store sequences of items, iterate over them, and transform collections of data.",
+      "learning_objectives": [
+        "Create lists with square brackets and access items by index (including negative indices)",
+        "Add items with append() and extend(), remove items with remove() and pop()",
+        "Iterate over lists with for loops and build new lists from existing ones",
+        "Slice lists to extract portions and understand list mutability"
+      ],
+      "lessons": [
+        {
+          "title": "Creating Lists and Accessing Items",
+          "key_teaching_points": [
+            "Lists store ordered sequences in square brackets: [item1, item2, item3]",
+            "Access items by zero-based index: first_item = my_list[0]",
+            "Negative indices count from end: my_list[-1] is last item, [-2] is second-to-last",
+            "IndexError occurs when accessing an index that doesn't exist",
+            "len(my_list) returns number of items; use len() - 1 for last valid index"
+          ],
+          "estimated_minutes": 30
+        },
+        {
+          "title": "Modifying Lists: Adding and Removing Items",
+          "key_teaching_points": [
+            "Lists are mutable\u2014they can change after creation unlike strings",
+            "append(item) adds to end; insert(index, item) adds at specific position",
+            "remove(value) deletes first matching item; pop(index) removes and returns item at index",
+            "Methods like append() and sort() modify the list in-place and return None (not a new list)"
+          ],
+          "estimated_minutes": 25
+        },
+        {
+          "title": "Iterating and Slicing Lists",
+          "key_teaching_points": [
+            "for item in my_list iterates over each element directly",
+            "for i in range(len(my_list)) iterates by index when you need positions",
+            "Slicing extracts portions: my_list[1:4] gets items at indices 1, 2, 3 (not 4)",
+            "Slice notation [start:stop:step]; omit values for defaults (start=0, stop=end, step=1)",
+            "List comprehensions provide concise way to transform lists: [x*2 for x in numbers]"
+          ],
+          "estimated_minutes": 30
+        }
+      ],
+      "hands_on_activity": "Create a 'To-Do List Manager' that starts with an empty list. Build a menu that lets users: (1) add a task, (2) view all tasks with numbers, (3) mark a task complete by removing it by index, (4) quit. Use a while loop for the menu and demonstrate append(), list iteration, and pop().",
+      "key_takeaways": [
+        "Lists are mutable ordered sequences accessed by zero-based index; negative indices count from the end",
+        "append() adds to end; remove() deletes by value; pop() removes by index and returns the item",
+        "Slicing [start:stop] extracts portions; stop index is exclusive (not included in result)",
+        "List methods like append() and sort() modify in-place and return None, not a new list"
+      ]
+    },
+    {
+      "title": "Dictionaries: Storing Key-Value Relationships",
+      "description": "Use dictionaries to model real-world entities and relationships by storing data as key-value pairs.",
+      "learning_objectives": [
+        "Create dictionaries with curly braces and access values by key",
+        "Add, modify, and remove key-value pairs dynamically",
+        "Iterate over keys, values, and key-value pairs with dictionary methods",
+        "Choose between lists and dictionaries based on whether you need order/indexing or named access"
+      ],
+      "lessons": [
+        {
+          "title": "Creating and Accessing Dictionaries",
+          "key_teaching_points": [
+            "Dictionaries store key-value pairs in curly braces: {'name': 'Alice', 'age': 30}",
+            "Access values by key: person['name'] returns 'Alice'",
+            "KeyError occurs when accessing a key that doesn't exist; use .get(key, default) for safety",
+            "Keys must be immutable (strings, numbers, tuples); values can be any type",
+            "Dictionaries model real-world entities: person, book, student\u2014keys are attributes"
+          ],
+          "estimated_minutes": 30
+        },
+        {
+          "title": "Modifying Dictionaries and Checking Membership",
+          "key_teaching_points": [
+            "Add or update entries: dict[key] = value (creates if new, updates if exists)",
+            "Remove entries: del dict[key] or dict.pop(key) which also returns the value",
+            "in operator checks if key exists: if 'name' in person",
+            "Dictionaries are mutable like lists\u2014they can change after creation"
+          ],
+          "estimated_minutes": 25
+        },
+        {
+          "title": "Iterating Over Dictionaries",
+          "key_teaching_points": [
+            "for key in dict iterates over keys only",
+            ".values() returns all values; .keys() returns all keys; .items() returns (key, value) tuples",
+            "for key, value in dict.items() unpacks tuples for convenient access to both",
+            "Dictionary order is preserved in Python 3.7+, but dictionaries are conceptually unordered"
+          ],
+          "estimated_minutes": 25
+        }
+      ],
+      "hands_on_activity": "Build a 'Contact Book' that stores names as keys and phone numbers as values in a dictionary. Create functions to: add a contact, search for a contact by name (using .get() to handle missing names gracefully), display all contacts, and remove a contact. Use a menu loop to call these functions.",
+      "key_takeaways": [
+        "Dictionaries map keys to values like a real dictionary maps words to definitions",
+        "Access by key with dict[key]; use .get(key, default) to avoid KeyError when key might not exist",
+        "Use .items() with for key, value in dict.items() to iterate over both keys and values",
+        "Choose dictionaries when you need named access to values; choose lists when order and numeric indexing matter"
+      ]
+    },
+    {
+      "title": "String Manipulation and Text Processing",
+      "description": "Process and transform text using string methods, slicing, formatting, and common text patterns.",
+      "learning_objectives": [
+        "Extract parts of strings using slicing and indexing",
+        "Transform strings with methods like .lower(), .upper(), .strip(), .replace(), and .split()",
+        "Format output using f-strings to embed variables in text",
+        "Process text data line-by-line and word-by-word for analysis"
+      ],
+      "lessons": [
+        {
+          "title": "String Slicing and Indexing",
+          "key_teaching_points": [
+            "Strings are sequences of characters; access by index just like lists: text[0]",
+            "Slicing extracts substrings: text[2:5], text[:3], text[3:] work like list slicing",
+            "Strings are immutable\u2014slicing and methods return new strings, don't modify originals",
+            "Common use: extract file extensions, parse formatted data, get first/last characters"
+          ],
+          "estimated_minutes": 25
+        },
+        {
+          "title": "Essential String Methods",
+          "key_teaching_points": [
+            ".lower() and .upper() change case; .strip() removes leading/trailing whitespace",
+            ".replace(old, new) substitutes text; returns new string (original unchanged)",
+            ".split(separator) breaks string into list of parts; .join(list) combines list into string",
+            "Method chaining: text.strip().lower().split() applies methods left-to-right"
+          ],
+          "estimated_minutes": 30
+        },
+        {
+          "title": "String Formatting with f-strings",
+          "key_teaching_points": [
+            "f-strings embed variables in text: f'Hello, {name}! You are {age} years old.'",
+            "Expressions work inside {}: f'Total: {price * quantity}'",
+            "Format numbers: f'{value:.2f}' for 2 decimal places, f'{number:,}' for thousands separator",
+            "f-strings are modern Python (3.6+); older code uses .format() or % formatting"
+          ],
+          "estimated_minutes": 25
+        }
+      ],
+      "hands_on_activity": "Create a 'Text Analyzer' that asks the user for a sentence, then displays: total characters (with and without spaces), word count (using .split()), frequency of a user-specified word (using .lower() and .count()), and the sentence in all caps, all lowercase, and title case. Use f-strings for all output.",
+      "key_takeaways": [
+        "Strings are immutable\u2014methods return new strings rather than modifying the original",
+        ".split() breaks strings into lists of words; .join() combines lists back into strings",
+        "f-strings embed variables and expressions in text: f'Result: {variable}' is clean and readable",
+        ".strip(), .lower(), and .replace() are workhorses for cleaning and normalizing text data"
+      ]
+    },
+    {
+      "title": "Reading and Writing Files",
+      "description": "Make programs persist data beyond execution by reading from and writing to text files on disk.",
+      "learning_objectives": [
+        "Open files for reading and writing using open() with appropriate modes",
+        "Read entire files, read line-by-line, and write content to files",
+        "Use the with statement to ensure files close properly even if errors occur",
+        "Process file data using loops, string methods, and data structures"
+      ],
+      "lessons": [
+        {
+          "title": "Reading Files",
+          "key_teaching_points": [
+            "open('filename.txt', 'r') opens file for reading; 'r' is read mode",
+            ".read() returns entire file as single string; .readlines() returns list of lines",
+            "with open(...) as file automatically closes file when block ends\u2014best practice",
+            "Iterate over file object directly for memory efficiency: for line in file"
+          ],
+          "estimated_minutes": 30
+        },
+        {
+          "title": "Writing Files",
+          "key_teaching_points": [
+            "open('filename.txt', 'w') opens for writing; 'w' mode erases existing content",
+            "'a' mode appends to end without erasing; 'x' creates new file (fails if exists)",
+            ".write(string) writes text to file; doesn't add newlines automatically (use \\n)",
+            "print(text, file=file_object) writes with automatic newline"
+          ],
+          "estimated_minutes": 25
+        },
+        {
+          "title": "Processing File Data",
+          "key_teaching_points": [
+            "Read files line-by-line in a loop to process large files without loading all into memory",
+            "Use .strip() to remove \\n newline characters at end of each line",
+            "Combine file operations with lists and dictionaries to analyze and transform data",
+            "Common pattern: read data, process it in memory (lists/dicts), write results to new file"
+          ],
+          "estimated_minutes": 25
+        }
+      ],
+      "hands_on_activity": "Build an 'Expense Tracker' that reads transactions from a text file (one per line: 'Category: Amount'). Parse each line using .split(':'), store expenses in a dictionary where keys are categories and values are lists of amounts. Calculate total spending per category and overall total, then write a summary report to a new file.",
+      "key_takeaways": [
+        "with open(filename, mode) as file ensures files close properly\u2014always use this pattern",
+        "'r' reads, 'w' writes (erasing existing content), 'a' appends; default is 'r' if mode omitted",
+        "Iterate over file object directly (for line in file) for memory-efficient line-by-line processing",
+        "Combining file I/O with data structures (lists, dictionaries) enables powerful data processing"
+      ]
+    },
+    {
+      "title": "Error Handling and Debugging",
+      "description": "Write robust programs that handle errors gracefully and develop systematic debugging skills.",
+      "learning_objectives": [
+        "Distinguish between syntax errors (caught before running) and runtime errors (exceptions during execution)",
+        "Use try/except blocks to catch exceptions and prevent crashes",
+        "Read and interpret error messages to identify problem location and type",
+        "Apply systematic debugging techniques including print statements and step-through analysis"
+      ],
+      "lessons": [
+        {
+          "title": "Understanding Errors and Reading Tracebacks",
+          "key_teaching_points": [
+            "Syntax errors prevent code from running; runtime errors (exceptions) occur during execution",
+            "Tracebacks read bottom-to-top: error type and message at bottom, line numbers above",
+            "Common exceptions: NameError (undefined variable), TypeError (wrong type), ValueError (right type, wrong value)",
+            "Error messages are helpful guides\u2014read them carefully rather than panicking"
+          ],
+          "estimated_minutes": 25
+        },
+        {
+          "title": "Handling Errors with try/except",
+          "key_teaching_points": [
+            "try block contains code that might fail; except block runs if an error occurs",
+            "Catch specific exceptions: except ValueError handles only ValueErrors",
+            "Bare except catches all exceptions\u2014use sparingly, better to be specific",
+            "try/except prevents crashes, lets programs respond gracefully to invalid input or missing files"
+          ],
+          "estimated_minutes": 30
+        },
+        {
+          "title": "Debugging Strategies",
+          "key_teaching_points": [
+            "Print debugging: add print statements to show variable values at key points",
+            "Rubber duck debugging: explain code line-by-line to find logic errors",
+            "Comment out code sections to isolate where problems occur",
+            "Test incrementally\u2014write small pieces, verify they work, then add more"
+          ],
+          "estimated_minutes": 20
+        }
+      ],
+      "hands_on_activity": "Enhance an existing program (like the number guessing game or calculator) with comprehensive error handling. Use try/except to catch ValueError when converting user input to numbers, handle FileNotFoundError when opening files, and validate that numbers are in expected ranges. Test with intentionally bad input to verify error handling works.",
+      "key_takeaways": [
+        "Tracebacks show error type, message, and line number\u2014read from bottom to top",
+        "try/except catches runtime errors so programs can respond gracefully instead of crashing",
+        "Catch specific exceptions (ValueError, FileNotFoundError) rather than using bare except",
+        "Print debugging is simple but effective\u2014display variable values to see what's actually happening"
+      ]
+    },
+    {
+      "title": "Modules and the Standard Library",
+      "description": "Leverage Python's standard library by importing modules and learn to explore available functionality.",
+      "learning_objectives": [
+        "Import modules using import and use their functions with dot notation",
+        "Use key standard library modules: random, datetime, math, os",
+        "Read module documentation to discover available functions and their usage",
+        "Understand when to import specific functions with from module import function"
+      ],
+      "lessons": [
+        {
+          "title": "Importing and Using Modules",
+          "key_teaching_points": [
+            "Modules are Python files containing functions and variables you can import",
+            "import module_name brings in the module; use functions with module.function()",
+            "from module import function imports specific functions to use without module prefix",
+            "import module as alias creates shorter names: import datetime as dt"
+          ],
+          "estimated_minutes": 25
+        },
+        {
+          "title": "Essential Standard Library Modules",
+          "key_teaching_points": [
+            "random: generate random numbers, choose random items, shuffle lists",
+            "datetime: work with dates and times, calculate durations, format timestamps",
+            "math: mathematical functions (sqrt, floor, ceil, pi, trigonometry)",
+            "os and pathlib: interact with file system, check if files exist, create directories",
+            "Standard library is built-in\u2014no installation needed, just import and use"
+          ],
+          "estimated_minutes": 35
+        },
+        {
+          "title": "Exploring Documentation and help()",
+          "key_teaching_points": [
+            "help(module) or help(function) shows documentation in the REPL",
+            "dir(module) lists all available functions and attributes",
+            "Official Python docs at docs.python.org document all standard library modules",
+            "Learning to read docs builds independence\u2014you don't need to memorize everything"
+          ],
+          "estimated_minutes": 20
+        }
+      ],
+      "hands_on_activity": "Build a 'Password Generator' that uses the random module to create secure passwords. Let users specify length and whether to include uppercase, lowercase, numbers, and symbols. Use random.choice() to select characters from appropriate strings. Add a feature using datetime to timestamp when passwords were generated and save the log to a file.",
+      "key_takeaways": [
+        "import module loads a module; use functions with module.function() syntax",
+        "Python's standard library provides tools for common tasks\u2014don't reinvent the wheel",
+        "help() and dir() let you explore modules interactively; docs.python.org has comprehensive reference",
+        "from module import function imports specific items for use without the module prefix"
+      ]
+    },
+    {
+      "title": "Capstone Project: Building a Complete Application",
+      "description": "Integrate everything you've learned to build a multi-feature program that solves a real-world problem.",
+      "learning_objectives": [
+        "Design a program structure that uses functions to organize different features",
+        "Combine variables, control flow, loops, data structures, and file I/O in a single application",
+        "Implement error handling to make the program robust against invalid input",
+        "Test the program systematically and debug issues that arise"
+      ],
+      "lessons": [
+        {
+          "title": "Planning Your Application",
+          "key_teaching_points": [
+            "Break complex programs into features, then break features into functions",
+            "Sketch the main menu and user flow before writing code",
+            "Identify what data structures you need: lists for sequences, dictionaries for entities",
+            "Plan file format: how will you store and retrieve data persistently?"
+          ],
+          "estimated_minutes": 30
+        },
+        {
+          "title": "Building Core Features",
+          "key_teaching_points": [
+            "Start with one feature, get it working completely, then add the next",
+            "Write functions with clear purposes\u2014each does one thing well",
+            "Test each function individually before integrating into the main program",
+            "Use meaningful variable names so code reads like English"
+          ],
+          "estimated_minutes": 45
+        },
+        {
+          "title": "Adding Persistence and Polish",
+          "key_teaching_points": [
+            "Save program state to a file so data persists between runs",
+            "Add input validation and error handling with try/except",
+            "Provide clear prompts and formatted output so users understand the interface",
+            "Test edge cases: empty data, invalid input, missing files"
+          ],
+          "estimated_minutes": 35
+        },
+        {
+          "title": "Testing, Debugging, and Refinement",
+          "key_teaching_points": [
+            "Run through every menu option and feature systematically",
+            "Try to break your program with bad input\u2014then fix the crashes",
+            "Add helpful error messages and validation",
+            "Consider user experience: Is it clear what to do? Is output readable?"
+          ],
+          "estimated_minutes": 25
+        }
+      ],
+      "hands_on_activity": "Build a complete 'Personal Library Manager' that stores books (title, author, year, read status) in a list of dictionaries and saves to a JSON file. Features: add book, view all books, search by title or author, mark book as read, delete book, show statistics (total books, books read, average publication year). Use functions for each feature, a while loop for the menu, error handling for file operations and user input, and provide formatted output.",
+      "key_takeaways": [
+        "Complex programs are built incrementally\u2014one working feature at a time, tested before moving on",
+        "Functions organize code by purpose; each function should do one clear thing",
+        "File I/O makes programs practical\u2014data persists and programs become tools, not toys",
+        "Planning before coding (what features? what data structures? what file format?) prevents getting stuck"
+      ]
+    }
+  ],
+  "assessment": {
+    "quiz_topics": [
+      "Identifying correct variable naming conventions and recognizing invalid names",
+      "Distinguishing between assignment (=) and comparison (==) operators in code",
+      "Predicting output of code snippets using if/elif/else conditional logic",
+      "Determining the output of for loops with range() and off-by-one scenarios",
+      "Identifying when to use while vs. for loops based on problem requirements",
+      "Analyzing functions to determine what values are returned vs. printed",
+      "Selecting correct list methods for adding, removing, and modifying items",
+      "Choosing between lists and dictionaries based on data access patterns",
+      "Identifying correct file modes ('r', 'w', 'a') for different file operations",
+      "Reading error messages to identify exception types and affected line numbers"
+    ],
+    "capstone_project": "Build a 'Personal Finance Tracker' application that helps users manage their budget. The program stores income and expense transactions (date, category, amount, description) in a list of dictionaries and persists data to a JSON file. Core features include: add transaction (with input validation), view all transactions sorted by date, calculate total income vs. expenses and show balance, display spending by category using a dictionary to aggregate amounts, search transactions by category or date range, and generate a summary report saved to a text file. The application must use functions to organize each feature, implement error handling for file operations and invalid input, provide a clear menu-driven interface with a while loop, and demonstrate proficiency with variables, conditionals, loops, functions, lists, dictionaries, string formatting, and file I/O. Students deliver working code and a brief text file explaining their design choices.",
+    "grading_criteria": [
+      "Functionality: Program runs without crashes and all required features work correctly with valid input (40%)",
+      "Code organization: Effective use of functions to separate concerns; each function has a clear single purpose (20%)",
+      "Data structures: Appropriate use of lists and dictionaries to model and manipulate transaction data (15%)",
+      "Error handling: Try/except blocks prevent crashes from invalid input and file errors; validation provides helpful messages (10%)",
+      "File persistence: Data correctly saves to and loads from file; program state persists between sessions (10%)",
+      "Code quality: Meaningful variable names, appropriate comments, consistent style, and readable formatting (5%)"
+    ]
+  },
+  "recommended_tools": [
+    "Python 3.8 or newer (download from python.org) - the programming language itself",
+    "Thonny IDE - beginner-friendly editor with built-in debugger and variable inspector",
+    "VS Code with Python extension - professional editor with excellent Python support (alternative to Thonny)",
+    "Python Tutor (pythontutor.com) - web-based visualizer for understanding code execution step-by-step",
+    "A text editor (Notepad++, Sublime Text, or built-in system editor) - for viewing and editing .py files",
+    "Terminal/Command Prompt - for running Python scripts from the command line",
+    "Official Python documentation (docs.python.org) - comprehensive reference for syntax and standard library"
+  ],
+  "next_steps": [
+    "Intermediate Python course covering list comprehensions, decorators, generators, object-oriented programming, and advanced data structures",
+    "Web development with Flask or Django to build web applications with Python",
+    "Data analysis with pandas and NumPy to process and visualize datasets",
+    "Automation scripting: use Python to automate file management, web scraping, and system administration tasks",
+    "Problem-solving practice on HackerRank, LeetCode (Easy problems), or Exercism Python track to solidify fundamentals",
+    "Automate the Boring Stuff with Python by Al Sweigart - free book focused on practical automation projects",
+    "Build personal projects: task manager, weather app using APIs, simple games, or tools for your hobbies/work",
+    "Join Python communities: r/learnpython subreddit, Python Discord servers, local meetups or study groups"
+  ]
+}

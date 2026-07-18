@@ -1,0 +1,24 @@
+# Environment / secrets
+.env
+.env.local
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Pipeline output
+course_output.json
+course_output.md
+logs/
+
+# Internal docs (architecture deep-dives, not for publishing)
+docs/
+
+# Tooling
+.claude/
+
+# OS
+.DS_Store
