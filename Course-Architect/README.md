@@ -1,4 +1,4 @@
-# Course Creation AI Agent Architecture
+# Course Architect
 
 A multi-agent AI system that automatically creates structured course outlines on any topic. Built with **AWS Strands Agents** and powered by **Amazon Bedrock** (or Anthropic API directly).
 
@@ -61,7 +61,7 @@ The Judge creates a feedback loop — if research is lacking, it sends revision 
 ### 1. Clone / enter the project
 
 ```bash
-cd Course-Designing-Agent
+cd Course-Architect
 ```
 
 ### 2. Install dependencies
@@ -220,7 +220,7 @@ Langfuse UI under your project.
 ## Project Structure
 
 ```
-Course-Designing-Agent/
+Course-Architect/
 ├── .env                     # Your credentials (not committed)
 ├── .env.example             # Credential template
 ├── pyproject.toml           # Project metadata + dependencies (uv)

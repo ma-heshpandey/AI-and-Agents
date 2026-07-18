@@ -1,5 +1,5 @@
 [project]
-name = "course-creation-ai-agent"
+name = "course-architect"
 version = "0.1.0"
 description = "Multi-agent AI system that creates structured course outlines, built with AWS Strands Agents and Amazon Bedrock."
 readme = "README.md"
